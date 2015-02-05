@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.osahontelecom.IOSSimulator</id>
-    <name>IOS Simulator Test</name>
+    <id>com.osahontelecom.tony</id>
+    <name>lecture2</name>
     <version>1.0</version>
     <publisher>osahon</publisher>
     <url>http://</url>
-    <description>undefined</description>
+    <description/>
     <copyright>2015 by osahon</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>a7f6f2a4-3d75-4cfd-82bd-8d48624baee9</guid>
+    <guid>fe02f6d9-c006-4070-952f-b7f3ef9119fc</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>
