@@ -11,7 +11,9 @@ var bgc1 = Titanium.UI.createWindow({
 	width:315,	
 });
 //array
-var array = ["cashewees", "peekincans", "walsnuts", "cocoloconuts"];
+var nutArray = ["cashewees", "peekincans", "walsnuts", "cocoloconuts"];
+var picArray = ["cashews.png", "pecans.png", "walnuts.png", "coconuts.png"];
+var count = 0;
 //views
 var storeview = Ti.UI.createLabel({
 	text:"Tony's Nuts.....Shop",
@@ -25,25 +27,24 @@ var storeview = Ti.UI.createLabel({
 		//give unique background color, text color and font style
 			//call this Array Label
 			
-	var picArray = ["jacket.jpg", "roseshirt.jpg", "soldiermotif.jpg", "tigershirt.jpg"];
+	
 		
-			for (var p=0; p<picArray.length; p++){
 				
 			
 				var picSwirl = Ti.UI.createView({
-					backgroundImage: picArray[p],
+					backgroundImage: picArray[0],
 					width:120,
 					height:100,
-					bottom:60,
-					left:20,
+					bottom:250,
+					left:100,
 					
 					
 				});
-			}
-			console.log(picArray);
+		
+//			console.log(picArray);
 			var arrayLabel = Ti.UI.createLabel({
 				
-				text:array[0] +" Is the featured Nut of the month",
+				text:nutArray[0] +" Is the featured Nut of the month",
 				left:10,
 				top:150,
 				
@@ -78,8 +79,27 @@ var storeview = Ti.UI.createLabel({
 			
 		});		
 		labelprevious.addEventListener('click', function() {
-			console.log(picArray[p]);
+			if (count == 0){
+				count = 3;
+				
+			}else{
+				count--;
+			}
+			arrayLabel.text=nutArray[count];
+			picSwirl.backgroundImage=picArray[count];
+			
 		});	
+			labelnext.addEventListener('click', function() {
+			if (count == 3){
+				count = 0;
+				
+			}else{
+				count++;
+			}
+			arrayLabel.text=nutArray[count];
+			picSwirl.backgroundImage=picArray[count];
+	});
+	
 //callbacks
 bgc1.add(picSwirl);
 bgc1.add(arrayLabel);
