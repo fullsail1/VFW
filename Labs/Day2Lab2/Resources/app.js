@@ -10,12 +10,25 @@ var bgc1 = Titanium.UI.createWindow({
 	height: 560,
 	width:315,	
 });
+var bgc = Titanium.UI.createWindow({
+	backgroundColor: "#D8CEF6",
+	height: 560,
+	width:315,	
+});
+
 //array
 var nutArray = ["cashewees", "peekincans", "walsnuts", "cocoloconuts"];
 var picArray = ["cashews.png", "pecans.png", "walnuts.png", "coconuts.png"];
 var count = 0;
 //views
 var storeview = Ti.UI.createLabel({
+	text:"Tony's Nuts.....Shop",
+	font: {fontFamily: "HoeflerText-BlackItalic" },
+	fontSize: 25,
+	top:40,
+	
+});
+var storeview1 = Ti.UI.createLabel({
 	text:"Tony's Nuts.....Shop",
 	font: {fontFamily: "HoeflerText-BlackItalic" },
 	fontSize: 25,
@@ -42,6 +55,13 @@ var storeview = Ti.UI.createLabel({
 				});
 		
 //			console.log(picArray);
+			var arrayLabel1 = Ti.UI.createLabel({
+				
+				text:nutArray[0] +" Is the featured Nut of the month",
+				left:10,
+				top:150,
+				
+			});
 			var arrayLabel = Ti.UI.createLabel({
 				
 				text:nutArray[0] +" Is the featured Nut of the month",
@@ -51,59 +71,30 @@ var storeview = Ti.UI.createLabel({
 			});
 			
 				
-		
+	var enterLabel = Ti.UI.createLabel({
+		backgroundImage:"squirrel.png",
+		width:75,
+		height:75,
+		left:100,
+		bottom:150,	
+	});	
 			
 		//labels
-		
-		
-		
-		
-		
-				//two views with label next & previous(space appropriately)
-		var labelprevious = Ti.UI.createView({
-			backgroundImage:"previous.jpg",
-			bottom : 10,
-			height: 40,
-			width: 115,
-			left: 5,
-			
-		});		
-				
-		var labelnext = Ti.UI.createView({
-			backgroundImage:"next.jpg",
-			bottom : 10,
-			height: 40,
-			width: 115,
-			right: 5,
-		//	borderColor:"red",
-			
-		});		
-		labelprevious.addEventListener('click', function() {
-			if (count == 0){
-				count = 3;
-				
-			}else{
-				count--;
-			}
-			arrayLabel.text=nutArray[count];
-			picSwirl.backgroundImage=picArray[count];
-			
-		});	
-			labelnext.addEventListener('click', function() {
-			if (count == 3){
-				count = 0;
-				
-			}else{
-				count++;
-			}
-			arrayLabel.text=nutArray[count];
-			picSwirl.backgroundImage=picArray[count];
-	});
+		enterLabel.addEventListener('dblclick',function(){
+	alert("WELCOME TO TONY'S\nWe LOOOOVVVEEE NUTS'!");
+	require("project1");
 	
-//callbacks
-bgc1.add(picSwirl);
-bgc1.add(arrayLabel);
-bgc1.add(labelnext);
-bgc1.add(labelprevious);
-bgc1.add(storeview);
-bgc1.open();                                                                                                                                                                      
+	
+});
+bgc.add(picSwirl);
+bgc.add(arrayLabel1);
+bgc.add(enterLabel);
+bgc.add(storeview1);
+bgc.open();
+//require("project1");
+
+		
+		
+		
+		
+                                                                                                                                                           
