@@ -46,7 +46,7 @@ var labelprevious = Ti.UI.createView({
 			
 		//labels
 		homeLabel.addEventListener('click',function(){
-	require("bgc.open");
+    bgc1.close();	
 	
 	
 });
