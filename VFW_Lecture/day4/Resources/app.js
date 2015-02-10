@@ -36,6 +36,14 @@ var bluntTable = Ti.UI.createTableView({
 	                                                    
 });
 
+
+var row= Ti.UI.createTableViewRow({
+	title:breakfastItems[0].title,
+
+});
+
+
+//table
 var bluntSection = Ti.UI.createTableViewSection({
 	headerTitle: SMOKES
 });
