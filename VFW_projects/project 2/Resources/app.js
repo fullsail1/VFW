@@ -5,8 +5,10 @@
 
 
 //housekeeping
-
+var myData = require("data");
 //background window
+ var sectionAll=[];
+
 mainWin = Ti.UI.createWindow({
 	backgroundColor:"#AB9CDE",
 	
@@ -15,72 +17,57 @@ mainWin = Ti.UI.createWindow({
 
 });
 
-//choose topic and collect information
 
-
-
-//create arrays 
-var cheapSeatArray  = ["100", "101", "102", "103", "104"];
-var mediumSeatArray = ["200", "201", "202", "203", "204"];
-var premiumSeatArray = ["300", "301", "302", "303", "304"];
-
-
-//create table
-var seatingTable = Ti.UI.createTableView({
-	headerTitle: "Seating Chart",
-	data: [],
-	top: 30
+ 
+ seatTable = Ti.UI.createTableView({
+	data:myData.section,
+	top:"40"
 	
-}); 
-//seating table      
+	
+});
+//MAKE SECTION
+ for (var n in myData.data.seats) {
+  console.log(n);
+  var section = Ti.UI.createTableViewSection({
+   headerTitle: myData.data.seats[n].title,
+   
+   
+   
+   
+   
+   
 
-		//table sections
-		var seatTypeCheap = Ti.UI.createTableViewSection({
-			headerTitle:"Cheap SEATS",
-			
-		});
-		 var seatTypeMedium = Ti.UI.createTableViewSection({
-			 headerTitle:"Medium SEATS",
- 			
-		 });
-		 var seatTypePremium = Ti.UI.createTableViewSection({
-			 headerTitle:"Premium SEATS",
- 			
-		 });
-		//cheap
-		//premium
-		//medium
-						 	//table rows
-						 	for (i=0; i<cheapSeatArray.length; i++){
-						 	var cheapRow = Ti.UI.createTableViewRow({
-						 		title:cheapSeatArray[i],
-						 	});
-						 		
-						 	
-						 	  seatTypeCheap.add(cheapRow);
-						 	  }                                        
-						 	  for (i=0; i<mediumSeatArray.length; i++){
-						 	var mediumRow = Ti.UI.createTableViewRow({
-						 		title:mediumSeatArray[i],
-						 	});
-						 		
-						 	
-						 	  seatTypeMedium.add(mediumRow);
-						 	  }      
-						 	  for (i=0; i<premiumSeatArray.length; i++){
-						 	var premiumRow = Ti.UI.createTableViewRow({
-						 		title:premiumSeatArray[i],
-						 	});
-						 		
-						 	
-						 	  seatTypePremium.add(premiumRow);
-						 	  }                                                                                                                                                
-						 	//cheap seats 300 - 305
-						 	//medium seats 200 - 205
-						 	//premium seats 100 - 105
-var myArray = [seatTypeCheap, seatTypeMedium, seatTypePremium ];
-seatingTable.setData(myArray);
+  });
+  console.log(myData.data.seats[n].title);
+  
+  	//MAKE ROW
+	 	  for (i=0; i<myData.data.seats[n].SeatNumber.length; i++){
+	      var row = Ti.UI.createTableViewRow({
+	   		//POPULATE ROW
+	  		 title: myData.data.seats[n].SeatNumber[i],
+	  		 	  		 
+	  		 font:{fontFamily:"Thonburi"},
+	  		}); 
+	  		
+		section.add(row);
+	}  
+//ADD ROW TO SECTION  
 
+sectionAll.push(section);
 
-mainWin.add(seatingTable);
-mainWin.open();                                                                                               
+	}
+	var pictest = Ti.UI.createImageView({
+		backgroundImage:"test45.jpg",
+		top: "50",
+		bottom:"50"
+		
+		
+	});
+	
+	
+	
+mainWin.add(pictest);	
+seatTable.setData(sectionAll);         
+mainWin.add(seatTable);
+mainWin.open();
+

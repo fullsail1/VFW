@@ -59,7 +59,7 @@ var labelprevious = Ti.UI.createView({
 bgc1.add(homeLabel);
 bgc1.add(picSwirl);
 bgc1.add(arrayLabel);
-bgc1.add(labelnext);
+//bgc1.add(labelnext);
 bgc1.add(labelprevious);
 bgc1.add(storeview);
 bgc1.open();           
