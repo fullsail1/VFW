@@ -1,4 +1,4 @@
-var labelprevious = Ti.UI.createView({
+   var labelprevious = Ti.UI.createView({
 			backgroundImage:"previous.jpg",
 			bottom : 10,
 			height: 40,
@@ -11,7 +11,7 @@ var labelprevious = Ti.UI.createView({
 			backgroundImage:"next.jpg",
 			bottom : 10,
 			height: 40,
-			width: 115,
+			width: 115,   
 			right: 5,
 		});
 			
