@@ -1,8 +1,32 @@
 
+var win1 = Titanium.UI.createWindow({  
+    
+    backgroundColor:'#fff'
+});
+
+
+var view = Ti.UI.createView({
+	width:150,
+	height:150,
+	borderColor:"ccc",	
+	
+});
+var photo = Ti.UI.createImageView({
+	image:"images14.jpeg",
+	width:'40',
+	height:200
+});
+
+win1.add(view);
+win1.add(photo);
+win1.open();
+
 
 
 var pWidth = Ti.Platform.displayCaps.platformWidth;
 console.log(pWidth);
+var numOfItems = 20;
+var itemSize = pWidth/4;
 
 
 var win1 = Titanium.UI.createWindow({  
@@ -31,7 +55,7 @@ console.log(carGalleryList);
 // create scroll view
 var myCarInventoryView = Ti.UI.createScrollView({
 	layout: "horizontal",
-	contentWidth:pWidth
+	contentWidth:pWidth+10
 });
 //what are we looking at in this scroll view
 // below is the veiwer..or window to the inventory

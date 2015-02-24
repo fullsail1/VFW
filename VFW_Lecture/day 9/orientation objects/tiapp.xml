@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.osahontelecom.tony</id>
-    <name>Hicks_Anthony_Project3</name>
+    <name>orientation objects</name>
     <version>1.0</version>
     <publisher>osahon</publisher>
     <url>http://</url>
@@ -11,7 +11,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>9781bc15-5610-4e14-aad9-b082737759c6</guid>
+    <guid>3e735795-0dea-483a-88b1-b118def21fd6</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>

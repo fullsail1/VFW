@@ -23,26 +23,21 @@ mainWin = Ti.UI.createWindow({
 	data:myData.section,
 	top:"40"
 	
-	
-});
+ });
 //MAKE SECTION
  for (var n in myData.data.seats) {
   console.log(n);
+  //
   var section = Ti.UI.createTableViewSection({
    headerTitle: myData.data.seats[n].title,
    
-   
-   
-   
-   
-   
-
   });
+ 
   console.log(myData.data.seats[n].title);
   
   	//MAKE ROW
 	 	  for (i=0; i<myData.data.seats[n].SeatNumber.length; i++){
-	      var row = Ti.UI.createTableViewRow({
+           var row = Ti.UI.createTableViewRow({
 	   		//POPULATE ROW
 	  		 title: myData.data.seats[n].SeatNumber[i],
 	  		 	  		 
@@ -56,18 +51,11 @@ mainWin = Ti.UI.createWindow({
 sectionAll.push(section);
 
 	}
-	var pictest = Ti.UI.createImageView({
-		backgroundImage:"test45.jpg",
-		top: "50",
-		bottom:"50"
-		
-		
-	});
+
 	
 	
 	
-mainWin.add(pictest);	
-seatTable.setData(sectionAll);         
+//mainWin.add(pictest);	
+seatTable.add(sectionAll);       
 mainWin.add(seatTable);
 mainWin.open();
-
