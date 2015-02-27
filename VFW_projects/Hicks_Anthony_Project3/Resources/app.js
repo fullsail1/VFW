@@ -12,7 +12,7 @@ var space = 5;
 var itemInRow= 4;
 var spaceUsed = 4*2*5;
 var itemSize = (deviceW- spaceUsed)/4;
-var carPicHolder = [];
+var sushiPicHolder = [];
 
 //create window
 
@@ -33,52 +33,52 @@ var win2 = Titanium.UI.createWindow({
  });
 //create view
 
-var carScrollView = Ti.UI.createScrollView({
+var sushiScrollView = Ti.UI.createScrollView({
   bottom:120,
   layout: 'horizontal',
   contentWidth:"deviceW",
   
   
 });
-var carscreenswipe = Ti.UI.createView({
+var sushiscreenswipe = Ti.UI.createView({
 	layout:'horizontal',
 	contentHeight:deviceH,
 	contentWidth:deviceW
 });
-//console.log(carswipe);
+//console.log(sushiswipe);
 //establish repository
 
-var carFile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "cars");
-var carFileContent= carFile.getDirectoryListing();
-console.log(carFileContent);
+var sushiFile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "sushi");
+var sushiFileContent= sushiFile.getDirectoryListing();
+console.log(sushiFileContent);
 
 //create image view with loop through repository for thumbnail
-for(var i = 0; i <=carFileContent.length; i++){
-var carPicForCarPicHolder = Ti.UI.createImageView({
+for(var i = 0; i <=sushiFileContent.length; i++){
+var sushiPicForsushiPicHolder = Ti.UI.createImageView({
 	
-	image: "cars/"+ carFileContent[i],
+	image: "sushi/"+ sushiFileContent[i],
 	defaultImage:"images",
 
     index:i,
-    title:"Car Stock",
+    title:"sushi Stock",
 	
 });
 var zoom = Ti.UI.createScrollView({
 	maxZoomScale:2.0
 });
-zoom.add(carPicForCarPicHolder);
-console.log(carPicForCarPicHolder);
+zoom.add(sushiPicForsushiPicHolder);
+console.log(sushiPicForsushiPicHolder);
 
-//carPicHolder.push(carPicForCarPicHolder);
-carPicHolder.push(zoom);
+//sushiPicHolder.push(sushiPicForsushiPicHolder);
+sushiPicHolder.push(zoom);
 }
 
 
 
-for(var i = 0; i <=carFileContent.length; i++){
-var carPic = Ti.UI.createImageView({
+for(var i = 0; i <=sushiFileContent.length; i++){
+var sushiPic = Ti.UI.createImageView({
 	
-	image: "cars/"+ carFileContent[i],
+	image: "sushi/"+ sushiFileContent[i],
 	defaultImage:"image",
 	top:space*10,
 	left: space,
@@ -86,26 +86,26 @@ var carPic = Ti.UI.createImageView({
     width: itemSize,
     height: itemSize,
     index:i,
-    title:"Car Inventory",
+    title:"sushi Inventory",
 	
 });
-	carPic.addEventListener("click", function(event){
+	sushiPic.addEventListener("click", function(event){
 //test to see if there is an event and whats its contents
-		var carswipe = Ti.UI.createScrollableView({
+		var sushiswipe = Ti.UI.createScrollableView({
 	currentPage:event.source.index,
-	views:carPicHolder,
+	views:sushiPicHolder,
 	showPagingControl:true,
 	height:deviceH,
 	width:deviceW
 		
 });
-		console.log(carPic);
-		console.log(carswipe);
-		//carscreenswipe.add(carswipe);
-		win2.add(carswipe);
+		console.log(sushiPic);
+		console.log(sushiswipe);
+		//sushiscreenswipe.add(sushiswipe);
+		win2.add(sushiswipe);
 		win2.open();
 });
-  carScrollView.add(carPic);
+  sushiScrollView.add(sushiPic);
 }
 
 //create image view with loop through repository for bigpic
@@ -132,9 +132,9 @@ var carPic = Ti.UI.createImageView({
  
 // });
 
-//console.log(carswipe);
-//console.log(carPicHolder);
+//console.log(sushiswipe);
+//console.log(sushiPicHolder);
 
-//carScrollView(carswipe);
-win1.add(carScrollView);
+//sushiScrollView(sushiswipe);
+win1.add(sushiScrollView);
 win1.open();
