@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.osahontelecom.tony</id>
-    <name>imageview sizing</name>
+    <id>com.osahontelecom.final</id>
+    <name>Hicks_Anthony_Project4</name>
     <version>1.0</version>
     <publisher>osahon</publisher>
     <url>http://</url>
@@ -11,7 +11,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>27af762b-3bbf-4cdd-8ca1-52bcd4519058</guid>
+    <guid>d4ec91d3-ac38-48cf-bd77-09088fff025a</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>

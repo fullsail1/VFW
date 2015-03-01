@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.osahontelecom.tony</id>
-    <name>imageview sizing</name>
+    <name>mainpage</name>
     <version>1.0</version>
     <publisher>osahon</publisher>
     <url>http://</url>
-    <description>undefined</description>
+    <description/>
     <copyright>2015 by osahon</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>27af762b-3bbf-4cdd-8ca1-52bcd4519058</guid>
+    <guid>52e1bb52-2dd4-4de8-96b7-03b63bb4d282</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>

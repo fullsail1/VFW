@@ -138,3 +138,9 @@ var sushiPic = Ti.UI.createImageView({
 //sushiScrollView(sushiswipe);
 win1.add(sushiScrollView);
 win1.open();
+
+// var nav = Ti.UI.iOS.NavigationWindow({
+	// window:win1
+// }),
+// 
+// nav.openWindow();
