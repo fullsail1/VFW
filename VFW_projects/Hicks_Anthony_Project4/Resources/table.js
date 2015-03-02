@@ -1,13 +1,14 @@
-xports.data = {
+exports.data = {
 
 
-   "tablue": [
+   "resourses": [
 
 
-    {title: "SERVICES", "CATEGORIES": LEGAL, HOUSING, MEDICAL, TRANSPORTATION, BANKING; },
+    {title: "SERVICES", "categories": ["LEGAL", "HOUSING", "MEDICAL", "TRANSPORTATION", "BANKING"]},
 
-    {title: "LEISURE", "CATEGORIES": FOOD, SHOPS, ATTRACTIONS, },
+    {title: "LEISURE", "categories": ["FOOD", "SHOPS", "ATTRACTIONS"]},
 
-    {title: "HELP", "CATEGORIES": SUICIDE, HARDSHIP,}
+    {title: "HELP", "categories": ["SUICIDE", "HARDSHIP"]}
 
- };
+ ]
+};

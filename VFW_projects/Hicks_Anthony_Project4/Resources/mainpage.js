@@ -54,20 +54,13 @@ var label1 = Titanium.UI.createLabel({
 	 width:'200',
 	 heigth:"155"
 });
-var enterLabel = Ti.UI.createLabel({
-		backgroundImage:"squirrel.png",
-		width:75,
-		height:75,
-		left:100,
-		bottom:150,	
-	});	
-			
+
 		//labels
-		enterLabel.addEventListener('dblclick',function(){
-	alert("WELCOME TO TONY'S\nWe LOOOOVVVEEE NUTS'!");
-	require("project1");
+		label2.addEventListener('dblclick',function(event){
+	alert("Please Note that to access this portal there is a cost!");
+	require("tabledata");
 	
-	
+	console.log(event);
 });
 
  var label3 = Titanium.UI.createLabel({
