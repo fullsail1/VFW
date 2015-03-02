@@ -36,19 +36,12 @@ var label1 = Titanium.UI.createLabel({
 	height:"155",
 	top:50
 });
-var enterLabel = Ti.UI.createLabel({
-		backgroundImage:"squirrel.png",
-		width:75,
-		height:75,
-		left:100,
-		bottom:150,	
-	});	
+
 			
 		//labels
-		enterLabel.addEventListener('dblclick',function(){
-	alert("WELCOME TO TONY'S\nWe LOOOOVVVEEE NUTS'!");
-	require("project1");
-	
+		label1.addEventListener('dblclick',function(){
+	alert("Please check out some upcoming community events!");
+	require("imagbin");
 	
 });
 
@@ -97,8 +90,8 @@ var enterLabel = Ti.UI.createLabel({
 			
 		//labels
 		label3.addEventListener('dblclick',function(){
-	alert("Now for some FUN!!!\n Please Press any image you like!");
-	//require("project1");
+	//alert("Now for some FUN!!!\n Please Press any image you like!");
+	require("special");
 	
 	
 });

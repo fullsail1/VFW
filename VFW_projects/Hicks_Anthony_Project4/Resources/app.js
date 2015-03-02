@@ -61,7 +61,7 @@ console.log(deviceH);
     	center:160,
     });
      var label = Ti.UI.createLabel({
-    	text: "African Tourism and Life Center\n A division of NADDA",
+    	text: "African Tourism and Life Center\n       A division of NADDA",
     
     	//backgroundImage: "next.jpg",
     	top:30,
@@ -87,11 +87,9 @@ button.animate(animation);
    // splashPic2.add(button);
     
 button.addEventListener("click", function() {
-  
+  require("mainpage");
 });
-//console.log(imageGalleryList);[]
 
-//console.log(splashPic);
 splashPic2.add(label);
 splashPic2.add(button); 
 splashPic2.add(splashPic3);

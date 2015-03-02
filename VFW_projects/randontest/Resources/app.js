@@ -1,6 +1,6 @@
 
 var win1 = Titanium.UI.createWindow({  
-  // backgroundImage:"sushi20.jpg",
+  backgroundImage:"tree_bark.png",
   backgroundColor:'orange',
   height:530,
   width:300
@@ -8,7 +8,7 @@ var win1 = Titanium.UI.createWindow({
 
 var win2 = Titanium.UI.createWindow({  
   // backgroundImage:"sushi20.jpg",
-  backgroundColor:'brown',
+  //backgroundColor:'brown',
   height:400,
   width:225
 });
@@ -40,14 +40,14 @@ var pic = Math.round((Math.random()*sushiFileContent.length)+1);
 var x = pic;
  
 	
-var sushiPic = Ti.UI.createImageView({
-backgroundImage:"sushi/"+ sushiFileContent[x],
-//backgroundColor:"white",
-//layout:"horizontal",
-top:50,
-height:400,
-width:225,
-});
+// var sushiPic = Ti.UI.createImageView({
+// backgroundImage:"sushi/"+ sushiFileContent[x],
+// //backgroundColor:"white",
+// //layout:"horizontal",
+// top:50,
+// height:400,
+// width:225,
+// });
 
 var button = Ti.UI.createButton({
     	title: "CLICK HERE",
@@ -77,7 +77,7 @@ width:225,
   	win2.open();
   });
   
-sushiPic.add(win2);
+//sushiPic.add(win2);
 
 win1.add(button);
 
