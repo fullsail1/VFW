@@ -55,7 +55,7 @@ row.addEventListener('click', function(e){
 });
 
 
-	
+	 
 	}   
 //ADD ROW TO SECTION  
 
