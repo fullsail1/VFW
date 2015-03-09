@@ -27,24 +27,24 @@ Titanium.UI.LANDSCAPE_LEFT,
 Titanium.UI.LANDSCAPE_RIGHT,
 	],
 });
-var win2 = Titanium.UI.createWindow({  
-    title:'first window',
-    backgroundColor:'green',
- });
+// var win2 = Titanium.UI.createWindow({  
+    // title:'first window',
+    // backgroundColor:'green',
+ // });
 //create view
 
 var sushiScrollView = Ti.UI.createScrollView({
-  bottom:120,
-  layout: 'horizontal',
-  contentWidth:"deviceW",
-  
-  
-});
-var sushiscreenswipe = Ti.UI.createView({
-	layout:'horizontal',
-	contentHeight:deviceH,
-	contentWidth:deviceW
-});
+  // bottom:120,
+   layout: 'horizontal',
+   contentWidth:"deviceW",
+   
+   
+ });
+// var sushiscreenswipe = Ti.UI.createView({
+	// layout:'horizontal',
+	// contentHeight:deviceH,
+	// contentWidth:deviceW
+// });
 //console.log(sushiswipe);
 //establish repository
 
@@ -53,31 +53,31 @@ var sushiFileContent= sushiFile.getDirectoryListing();
 console.log(sushiFileContent);
 
 //create image view with loop through repository for thumbnail
-for(var i = 0; i <=sushiFileContent.length; i++){
-var sushiPicForsushiPicHolder = Ti.UI.createImageView({
-	
-	image: "sushi/"+ sushiFileContent[i],
-	defaultImage:"images",
-
-    index:i,
-    title:"sushi Stock",
-	
-});
-var zoom = Ti.UI.createScrollView({
-	maxZoomScale:2.0
-});
-zoom.add(sushiPicForsushiPicHolder);
-console.log(sushiPicForsushiPicHolder);
-
-//sushiPicHolder.push(sushiPicForsushiPicHolder);
-sushiPicHolder.push(zoom);
-}
+// for(var i = 0; i <=sushiFileContent.length; i++){
+// var sushiPicForsushiPicHolder = Ti.UI.createImageView({
+// 	
+	// image: "sushi/"+ sushiFileContent[i],
+	// defaultImage:"images",
+// 
+    // index:i,
+    // title:"sushi Stock",
+// 	
+// });
+// var zoom = Ti.UI.createScrollView({
+	// maxZoomScale:2.0
+// });
+// zoom.add(sushiPicForsushiPicHolder);
+// // console.log(sushiPicForsushiPicHolder);
+// 
+// //sushiPicHolder.push(sushiPicForsushiPicHolder);
+// sushiPicHolder.push(zoom);
+// }
 
 
 
 for(var i = 0; i <=sushiFileContent.length; i++){
 var sushiPic = Ti.UI.createImageView({
-	
+	title:"sushi Inventory",
 	image: "sushi/"+ sushiFileContent[i],
 	defaultImage:"image",
 	top:space*10,
@@ -86,27 +86,68 @@ var sushiPic = Ti.UI.createImageView({
     width: itemSize,
     height: itemSize,
     index:i,
-    title:"sushi Inventory",
+    
 	
 });
-	sushiPic.addEventListener("click", function(event){
+sushiPic.addEventListener("click", function(event){
+	var matrix = Ti.UI.create2DMatrix();
+  matrix = matrix.rotate(150);
+  matrix = matrix.scale(1, 1);
+  var a = Ti.UI.createAnimation({
+    transform : matrix,
+    duration : 3000,
+    autoreverse : true,
+    repeat : 5
+  
+  });
+  
+  sushiPic.animate(a);
 //test to see if there is an event and whats its contents
-		var sushiswipe = Ti.UI.createScrollableView({
-	currentPage:event.source.index,
-	views:sushiPicHolder,
-	showPagingControl:true,
-	height:deviceH,
-	width:deviceW
-		
+
 });
-		console.log(sushiPic);
-		console.log(sushiswipe);
-		//sushiscreenswipe.add(sushiswipe);
-		win2.add(sushiswipe);
-		win2.open();
+
+
+  sushiScrollView.addEventListener('dblclick', function() {
+  var matrix = Ti.UI.create2DMatrix();
+  matrix = matrix.rotate(150);
+  matrix = matrix.scale(1, 1);
+  var a = Ti.UI.createAnimation({
+    transform : matrix,
+    duration : 3000,
+    autoreverse : true,
+    repeat : 5
+  
+  });
+  
+  sushiScrollView.animate(a);
+
 });
-  sushiScrollView.add(sushiPic);
+
+
+sushiScrollView.add(sushiPic);
+
 }
+
+
+
+
+
+		// var sushiswipe = Ti.UI.createScrollableView({
+	// currentPage:event.source.index,
+	// views:sushiPicHolder,
+	// showPagingControl:true,
+	// height:deviceH,
+	// width:deviceW
+// 		
+// });
+		 // console.log(sushiPic);
+		// console.log(sushiswipe);
+		// //sushiscreenswipe.add(sushiswipe);
+		// win2.add(sushiswipe);
+		// win2.open();
+// });
+  // sushiScrollView.add(sushiPic);
+// }
 
 //create image view with loop through repository for bigpic
 
@@ -137,6 +178,7 @@ var sushiPic = Ti.UI.createImageView({
 
 //sushiScrollView(sushiswipe);
 win1.add(sushiScrollView);
+
 win1.open();
 
 // var nav = Ti.UI.iOS.NavigationWindow({
